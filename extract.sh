@@ -51,8 +51,6 @@ sudo dmsetup create --concise "$(sudo parse-android-dynparts "$loopdev")"
 sudo mount -o ro /dev/mapper/dynpart-vendor_a "$mount"
 cp "$mount"/firmware/a660_zap.b* .
 cp "$mount"/firmware/a660_zap.mdt .
-cp "$mount"/firmware/a660_gmu.bin .
-cp "$mount"/firmware/a660_sqe.fw .
 cp "$mount"/firmware/yupik_ipa_fws.* .
 cp "$mount"/firmware/vpu20_1v.mbn .
 
