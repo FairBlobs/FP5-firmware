@@ -22,9 +22,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-#unzip -d "$tmpdir" "$1" images/BTFM.bin images/NON-HLOS.bin images/super.img
-unzip -d "$tmpdir" "$1" USER/BTFM.bin USER/NON-HLOS.bin USER/super.img
-mkdir "$tmpdir"/images/ && mv "$tmpdir"/USER/* "$tmpdir"/images/ && rmdir "$tmpdir"/USER/
+unzip -d "$tmpdir" "$1" images/BTFM.bin images/NON-HLOS.bin images/super.img
 
 ### NON-HLOS.bin ###
 sudo mount -o ro "$tmpdir"/images/NON-HLOS.bin "$mount"
